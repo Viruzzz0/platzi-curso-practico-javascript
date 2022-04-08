@@ -106,7 +106,7 @@ function calcularAreaCuadrado() {
     alert(area + " cm^2");
 }
 
-// Calcular triangulo
+// Calcular circulo
 
 function calcularPerimetroCirculo() {
     const input1 = document.getElementById("InputCirculoRadio");
@@ -126,6 +126,56 @@ function calcularAreaCirculo() {
     alert(area.toFixed(2) + " cm^2");
 }
 
-// Calcular circulo
+// Calcular triangulo
 
+function calculaPerimetroTriangulo() {
+    const input1 = document.getElementById("InputTrianguloLado1");
+    const input2 = document.getElementById("InputTrianguloLado2");
+    const input3 = document.getElementById("InputTrianguloBase");
+    
+    const lado1 = parseInt(input1.value);
+    const lado2 = parseInt(input2.value);
+    const base = parseInt(input3.value);
 
+    const perimetro = perimetroTriangulo(lado1 , lado2, base);
+    alert(perimetro);
+}
+
+function calcularAreaTriangulo() {
+    const input1 = document.getElementById("InputTrianguloBase");
+    const input2 = document.getElementById("InputTrianguloAltura");
+    
+    const base = parseInt(input1.value);
+    const altura = parseInt(input2.value);
+
+    const area = areaTriangulo(base, altura);
+    alert(area + " cm^2")
+}
+
+// Calcula la altura de un triangulo isosceles
+
+function calcularAlturatriangulo() {
+    const input1 = document.getElementById("InputTrianguloLado_isos");
+    const input2 = document.getElementById("InputTrianguloLado2_isos");
+    const input3 = document.getElementById("InputTrianguloBase_isos");
+    
+    const lado1 = parseInt(input1.value);
+    const lado2 = parseInt(input2.value);
+    const base = parseInt(input3.value);
+
+    const altura = alturaTriangulo(lado1, lado2, base);
+    if (lado1 != lado2) {
+        alert("No es un triangulo isosceles")
+    }
+    else if (base >= lado1 * 2) {
+        alert("eso no se pueda pa")
+    }
+    else{
+        alert(altura)
+    }
+}
+
+function alturaTriangulo(lado1,lado2, base) {
+        return Math.sqrt((lado1 * lado2) - Math.pow(base,2)/4);
+    
+}
