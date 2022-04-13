@@ -1,5 +1,24 @@
 body{
-    background-color: black;
-    color: rgb(7, 223, 205);
+    background-color: #000000;
+    color: #00ffb3;
     font-family: cursive;
+    text-align: center;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+.caja{
+    margin: 10px;
+    padding: 8px;
+    border-radius: 29px 29px 29px 29px;
+    -moz-border-radius: 29px 29px 29px 29px;
+    -webkit-border-radius: 29px 29px 29px 29px;
+    border: 3px solid #00ffb3;
+}
+#cupons{
+    margin-right: 70%;
 }
